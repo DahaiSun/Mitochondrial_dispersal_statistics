@@ -1,4 +1,4 @@
-# Interactive Analysis of Mitochondrial Localization in Cells
+# Interactive Analysis of Mitochondrial Dispersal in Cells
 
 ## Background
 
