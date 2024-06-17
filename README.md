@@ -8,6 +8,10 @@ Mitochondria are essential organelles in eukaryotic cells, involved in energy pr
 
 This project involves the creation of an interactive program that allows users to upload cell images along with corresponding mitochondrial channel images. The program will provide a drawing tool for users to mark regions of interest (ROI) within the cell images. The marked regions will then be analyzed to calculate the number of pixels in the ROI and the proportion of pixels in the mitochondrial images.
 
+> This project was originally implemented as part of the [Python programming course](https://github.com/szabgab/wis-python-course-2024-04)
+> at the [Weizmann Institute of Science](https://www.weizmann.ac.il/) taught by [Gabor Szabo](https://szabgab.com/)
+
+
 ## Technical Implementation
 
 1. Image Upload and Display
