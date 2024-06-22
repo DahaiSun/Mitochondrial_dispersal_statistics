@@ -52,8 +52,12 @@ Install Dependencies:
 ```bash
 pip install -r requirements.txt
 
-Running the program: python3 Mito_dispersal.py
+Running the program:
+```bash
+python3 Mito_dispersal.py
 
-Run Test: pytest
+Run Test:
+```bash
+pytest
 
 
