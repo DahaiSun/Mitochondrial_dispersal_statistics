@@ -39,4 +39,22 @@ Draw a figure that highlights the marked region on the cell image.
 Overlay the mitochondrial image to show the green pixels within the marked region.
 Use Matplotlib to generate and display the figure.
 
-   
+## Software Dependencies
+Python 3
+Tkinter
+OpenCV
+NumPy
+Matplotlib
+
+## User Guidance
+
+Install Dependencies
+~pip install -r requirements.txt
+
+Running the program
+~python3 Mito_dispersal.py
+
+Run Test
+~pytest
+
+
