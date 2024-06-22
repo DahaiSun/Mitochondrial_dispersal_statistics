@@ -40,11 +40,11 @@ Overlay the mitochondrial image to show the green pixels within the marked regio
 Use Matplotlib to generate and display the figure.
 
 ## Software Dependencies
-Python 3
-Tkinter
-OpenCV
-NumPy
-Matplotlib
+- Python 3
+- Tkinter
+- OpenCV
+- NumPy
+- Matplotlib
 
 ## User Guidance
 ```bash
