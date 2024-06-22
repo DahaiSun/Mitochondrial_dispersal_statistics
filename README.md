@@ -47,17 +47,14 @@ NumPy
 Matplotlib
 
 ## User Guidance
-
-Install Dependencies:
 ```bash
+#Install Dependencies:
 pip install -r requirements.txt
 
-Running the program:
-```bash
+#Running the program:
 python3 Mito_dispersal.py
 
-Run Test:
-```bash
+#Run Test:
 pytest
 
 
