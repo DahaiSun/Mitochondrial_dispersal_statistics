@@ -47,7 +47,7 @@ NumPy
 Matplotlib
 
 ## User Guidance
-''' bash
+'''bash
 
 Install Dependencies: pip install -r requirements.txt
 
