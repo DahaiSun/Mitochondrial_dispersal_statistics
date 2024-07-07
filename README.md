@@ -14,47 +14,90 @@ This project involves the creation of an interactive program that allows users t
 
 ## Technical Implementation
 
-1. Image Upload and Display
+1. **Image Upload and Display**
 
-Use Tkinter for the GUI to allow users to upload cell and mitochondrial images.
-Display the images in the application window.
+   - Use Tkinter for the GUI to allow users to upload cell and mitochondrial images.
+   - Display the images in the application window.
 
-2. Marking Regions of Interest
+2. **Marking Regions of Interest**
 
-Implement drawing tools using OpenCV to enable users to mark regions on the cell images.
-Store the coordinates of the marked regions for further analysis.
+   - Implement drawing tools using OpenCV to enable users to mark regions on the cell images.
+   - Store the coordinates of the marked regions for further analysis.
 
-3. Pixel Calculation
+3. **Pixel Calculation**
 
-Calculate the total number of pixels within the marked regions.
-Analyze the corresponding mitochondrial image to count the number of green pixels in the marked regions.
+   - Calculate the total number of pixels within the marked regions.
+   - Analyze the corresponding mitochondrial image to count the number of green pixels in the marked regions. Threshold was set up by OSTU method
 
-4. Proportion Calculation
+4. **Proportion Calculation**
 
-Compute the proportion of green pixels to the total pixels in the marked area.
-Display the result to the user.
+   - Compute the proportion of green pixels to the total pixels in the marked area.
+   - Display the result to the user using pop up excel window.
 
-5. Figure drawing
-Draw a figure that highlights the marked region on the cell image.
-Overlay the mitochondrial image to show the green pixels within the marked region.
-Use Matplotlib to generate and display the figure.
+5. **Figure Drawing**
+
+   - Plot the intensity histogram for each mark regions, and indicate the OSTU threshold with a dashed line
 
 ## Software Dependencies
+
 - Python 3
 - Tkinter
 - OpenCV
 - NumPy
 - Matplotlib
+- Pillow
+- Pandas
 
 ## User Guidance
-```bash
-#Install Dependencies:
-pip install -r requirements.txt
 
-#Running the program:
-python3 Mito_dispersal.py
+### Installation
 
-#Run Test:
-pytest
+1. **Install Dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2. **Running the Program:**
+
+    ```bash
+    python Mito_dispersal.py
+    ```
+
+3. **Run Tests:**
+
+    ```bash
+    pytest
+    ```
+
+### Using the Software
+
+1. **Launch the Application:**
+
+    Run the program using the command provided above. The application window will open with options to upload images and mark regions of interest.
+
+2. **Upload Images:**
+
+    - Click the "Upload Cell Image" button to select and load a cell image.
+    - Click the "Upload Mitochondrial Image" button to select and load a mitochondrial image.
+
+3. **Mark Regions of Interest:**
+
+    - Click the "Mark Cell" button to begin marking regions of interest on the cell image. Left click and hold to draw. Mutipule marks can be draw on the same image, each one label with a number
+    - To delete marked regions, click the "Delete Mark" button.
+
+4. **Calculate Mitochondrial Dispersal:**
+
+    - After marking the regions, click the "Calculate" button to analyze the images. The results, including the proportion of mitochondria in each marked region, will be displayed in the GUI window.
+
+    - The results will also be saved to an Excel file named `MitoDispersalResults.xlsx` and opened automatically.
+
+5. **View Histograms:**
+
+    - A histogram showing the distribution of mitochondrial pixels within each marked region will be displayed in a separate window.
+
+## Note
+
+Ensure that both the cell and mitochondrial images are properly loaded and regions of interest are marked before performing the calculation. If any issues arise, appropriate error messages will be displayed.
 
 
