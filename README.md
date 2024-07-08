@@ -67,7 +67,7 @@ This project involves the creation of an interactive program that allows users t
 3. **Run Tests:**
 
     ```bash
-    pytest
+    python test_Mito_Dispersal.py
     ```
 
 ### Using the Software
