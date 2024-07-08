@@ -121,6 +121,8 @@ class MitoDispersalAnalyzer:
         self.cell_label.bind("<B1-Motion>", self.draw)
         self.cell_label.bind("<ButtonRelease-1>", self.stop_drawing)
         self.cell_label.bind("<Double-Button-1>", self.finish_drawing)
+        self.cell_label.config(cursor="cross")
+        messagebox.showinfo("Info", "Ready to mark the cell. Draw ROI by clicking and dragging.")
 
     def start_drawing(self, event):
         self.drawing = True
