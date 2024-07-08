@@ -23,6 +23,7 @@ This project involves the creation of an interactive program that allows users t
 
    - Implement drawing tools using OpenCV to enable users to mark regions on the cell images.
    - Store the coordinates of the marked regions for further analysis.
+  
 
 3. **Pixel Calculation**
 
@@ -85,16 +86,19 @@ This project involves the creation of an interactive program that allows users t
 
     - Click the "Mark Cell" button to begin marking regions of interest on the cell image. Left click and hold to draw. Mutipule marks can be draw on the same image, each one label with a number
     - To delete marked regions, click the "Delete Mark" button.
+    - ![Example Marked cells](https://github.com/DahaiSun/Mitochondrial_dispersal_statistics/blob/main/user_instruction/mark_cell.png)
 
 4. **Calculate Mitochondrial Dispersal:**
 
     - After marking the regions, click the "Calculate" button to analyze the images. The results, including the proportion of mitochondria in each marked region, will be displayed in the GUI window.
 
     - The results will also be saved to an Excel file named `MitoDispersalResults.xlsx` and opened automatically.
+    - ![Example Resluts](https://github.com/DahaiSun/Mitochondrial_dispersal_statistics/blob/main/user_instruction/calculate_result.png)
 
 5. **View Histograms:**
 
     - A histogram showing the distribution of mitochondrial pixels within each marked region will be displayed in a separate window.
+    - ![Example plot](https://github.com/DahaiSun/Mitochondrial_dispersal_statistics/blob/main/user_instruction/intensity_plot.png)
 
 ## Note
 
