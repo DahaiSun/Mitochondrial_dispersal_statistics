@@ -23,6 +23,7 @@ This project involves the creation of an interactive program that allows users t
 
    - Implement drawing tools using OpenCV to enable users to mark regions on the cell images.
    - Store the coordinates of the marked regions for further analysis.
+   - ![Example Marked cells](https://github.com/DahaiSun/Mitochondrial_dispersal_statistics/blob/main/user_instruction/mark_cell.png)
 
 3. **Pixel Calculation**
 
