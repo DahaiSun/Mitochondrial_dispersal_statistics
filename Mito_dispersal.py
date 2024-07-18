@@ -73,10 +73,10 @@ class MitoDispersalAnalyzer:
             widget.bind("<Leave>", self.on_leave)
 
     def on_enter(self, event):
-        event.widget['background'] = 'lightblue'
+        event.widget.configure(style="Hover.TButton")
 
     def on_leave(self, event):
-        event.widget['background'] = 'SystemButtonFace'
+        event.widget.configure(style="TButton")
 
     def create_placeholder_image(self, width, height):
         img = np.zeros((height, width, 3), dtype=np.uint8)
@@ -165,12 +165,10 @@ class MitoDispersalAnalyzer:
             self.display_image(img, self.mito_label)
 
     def delete_mark(self):
-        if self.cell_img is not None:
-            self.cell_mask.fill(0)
-            self.roi_coords = []
-            self.display_image(self.cell_img, self.cell_label)
-        if self.mito_img is not None:
-            self.display_image(self.mito_img, self.mito_label)
+        if self.roi_coords:
+            self.roi_coords.pop()  # Remove the last ROI
+            self.cell_mask = np.zeros(self.cell_img.shape[:2], dtype=np.uint8)  # Reset the mask
+            self.update_drawing(finalize=True)  # Redraw the remaining ROIs
 
     def calculate(self):
         if self.cell_img is None or self.mito_img is None:
@@ -277,4 +275,10 @@ class MitoDispersalAnalyzer:
 if __name__ == "__main__":
     root = tk.Tk()
     app = MitoDispersalAnalyzer(root)
+    # Configure style for the hover effect
+    style = ttk.Style()
+    style.configure("TButton", background="SystemButtonFace")
+    style.map("Hover.TButton",
+              background=[("active", "lightblue")])
+
     root.mainloop()
